@@ -7,6 +7,7 @@ const revHash = require('rev-hash');
 const revPath = require('rev-path');
 const sortKeys = require('sort-keys');
 const modifyFilename = require('modify-filename');
+const file = require('gulp-file');
 
 let manifestObject = {};
 
@@ -193,6 +194,10 @@ plugin.manifestMerge = function (opts) {
 		this.push(file);
 		cb();
 	});
+};
+
+plugin.getManifest = () => {
+	return file('rev-manifest.json', JSON.stringify(manifestObject), { src: true });
 };
 
 module.exports = plugin;

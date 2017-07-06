@@ -34,6 +34,7 @@
     "assets"
   ],
   "dependencies": {
+    "gulp-file": "^0.3.0",
     "gulp-util": "^3.0.0",
     "modify-filename": "^1.1.0",
     "rev-hash": "^1.0.0",
